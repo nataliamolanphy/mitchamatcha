@@ -388,10 +388,16 @@ h1,h2,h3{
 }
 .drink-row { padding: 20px 0; border-bottom: 1px solid #eee; }
 .drink-row:last-child { border-bottom: none; }
-.nav-links.open {
+header:has(.nav-links.open) {
   background: #FFFFC6;
-  padding: 8px var(--gutter) 0;
 }
+
+.nav-links.open {
+  margin: 8px calc(-1 * var(--gutter)) -16px;
+  padding: 8px var(--gutter) 16px;
+  width: calc(100% + var(--gutter) * 2);
+}
+
 .nav-links.open a {
   border-bottom: 1px solid rgba(30,30,30,0.15);
 }
